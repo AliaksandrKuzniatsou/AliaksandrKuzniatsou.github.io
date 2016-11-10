@@ -11,12 +11,10 @@
     <script type="text/javascript">
         fetch('https://f.stdlib.com/iupacus/helloworld@dev')
         .then((response) => {
-            return response.blob();
+            return response.json();
         })
-        .then(function(myBlob) {
-            var objectURL = URL.createObjectURL(myBlob);
-            console.log(myBlob);
-            console.log(objectURL);
+        .then(function(data) {
+            console.log(data);
         });
     </script>
 </html>
